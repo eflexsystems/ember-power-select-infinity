@@ -50,9 +50,9 @@ export default Component.extend({
             }
         },
         onKeyDown(select, e) {
-            let action = get(this, 'onkeydown');
+            let action = get(this, 'onKeydown');
 
-            // if user passes `onkeydown` action
+            // if user passes `onKeydown` action
             if (!action || action(select, e) !== false) {
                 // if escape, then clear out selection
                 if (e.keyCode === 27) {

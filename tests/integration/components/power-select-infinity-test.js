@@ -10,13 +10,13 @@ module('Integration | Component | power-select-infinity', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{power-select-infinity}}`);
+    await render(hbs`{{power-select-infinity onChange=(action (mut selected))}}`);
 
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      {{#power-select-infinity}}
+      {{#power-select-infinity onChange=(action (mut selected))}}
         template block text
       {{/power-select-infinity}}
     `);
