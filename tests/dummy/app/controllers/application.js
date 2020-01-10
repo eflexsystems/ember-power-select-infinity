@@ -50,7 +50,7 @@ export default Controller.extend({
                 }
             });
         },
-        loadMore(term) {
+        loadMore() {
             return new RSVP.Promise(function(resolve) {
                 later(function() {
                     resolve(newUsers);

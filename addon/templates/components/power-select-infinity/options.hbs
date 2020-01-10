@@ -1,4 +1,4 @@
-<ul class="ember-power-select-options" role="listbox">
+<ul class="ember-power-select-options" role="listbox" aria-controls="ember-power-select-trigger-{{select.uniqueId}}" {{did-insert this.addHandlers}} ...attributes>
   {{#vertical-collection
       items=options
       estimateHeight=estimateHeight

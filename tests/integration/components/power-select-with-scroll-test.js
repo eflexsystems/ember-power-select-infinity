@@ -10,13 +10,13 @@ module('Integration | Component | power-select-with-scroll', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{power-select-with-scroll}}`);
+    await render(hbs`{{power-select-with-scroll onChange=(action (mut selected))}}`);
 
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      {{#power-select-with-scroll}}
+      {{#power-select-with-scroll onChange=(action (mut selected))}}
         template block text
       {{/power-select-with-scroll}}
     `);
