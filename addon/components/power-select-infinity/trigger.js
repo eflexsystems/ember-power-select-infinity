@@ -61,7 +61,7 @@ export default Component.extend({
     }
 
     if (newSelect.lastSearchedText !== oldSelect.lastSearchedText) {
-      if (isBlank(newSelect.lastSearchedText)) {
+      if (isBlank(newSelect.lastSearchedText) && isEmpty(newSelect.options)) {
         run.schedule('actions', null, newSelect.actions.close, null, true);
       } else {
         run.schedule('actions', null, newSelect.actions.open);
