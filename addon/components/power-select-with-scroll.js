@@ -58,5 +58,6 @@ export default PowerSelect.extend({
     init() {
         this._super(...arguments);
         this._publicAPIActions.onScroll = (...args) => this.send('onScroll', ...args);
+        this._publicAPIActions.search = (...args) => this.send('search', ...args);
     }
 });
