@@ -1,5 +1,5 @@
 {
-  "name": "eflex-ember-power-select-infinity",
+  "name": "@eflexsystems/ember-power-select-infinity",
   "version": "1.0.0",
   "description": "Ember Power Select with Infinity Paging and Occlusion Rendering",
   "keywords": [
